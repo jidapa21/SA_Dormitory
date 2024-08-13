@@ -10,8 +10,8 @@ type Room struct {
 
 	// DormID ทำหน้าที่เป็น FK
 	DormID 	*uint
-	Dorm	Dorm gorm:"foriegnKey:DormID"
+	Dorm	Dorm `gorm:"foriegnKey:DormID"`
 
 	// 1 playlist เป็นเจ้าของได้หลาย SoundPlaylists
-	Students []Student gorm:"foreignKey:RoomID"
+	Students []Student `gorm:"foreignKey:RoomID"`
 }

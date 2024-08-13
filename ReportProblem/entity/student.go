@@ -19,6 +19,6 @@ type Student struct {
 
 	// RoomID ทำหน้าที่เป็น FK
 	RoomID *uint
-	Room   Room gorm:"foriegnKey:RoomID"
+	Room   Room `gorm:"foriegnKey:RoomID"`
 
 }

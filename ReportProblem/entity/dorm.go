@@ -8,5 +8,5 @@ type Dorm struct {
 	DormGender 	string
 
 	// 1 dorm เป็นเจ้าของได้หลาย Rooms
-	Rooms []Room gorm:"foreignKey:DormID"
+	Rooms []Room `gorm:"foreignKey:DormID"`
 }
