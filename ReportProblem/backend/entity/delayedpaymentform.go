@@ -8,9 +8,9 @@ import (
 type DelayedPaymentForm struct {
     gorm.Model
     Name			string
-    DormPayment		double
-    ElectriclyBill  double
-    WaterBill		double
+    DormPayment		float64
+    ElectriclyBill  float64
+    WaterBill		float64
     BecauseOf		string
 	DueDate			time.Time
     Status			string

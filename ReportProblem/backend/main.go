@@ -1,9 +1,10 @@
 package main
 
 import (
-  "sut-dorm.com/reportproblem"
+  "github.com/jidapa21/SA_Dormitory/ReportProblem/backend/entity"
   "gorm.io/gorm"
   "gorm.io/driver/sqlite"
+  
 )
 
 func main() {
