@@ -1,0 +1,118 @@
+.status-text {
+    font-size: 18px;
+    /* ขนาดฟอนต์ของหัวข้อ */
+}
+
+.status-box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 5px 0px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px; /* กำหนดมุมโค้ง */
+}
+  .container {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดกลางแนวนอน */
+    /*align-items: center;*/ /* จัดกลางแนวตั้ง */
+    height: 100vh; /* ความสูง 100% ของ viewport */
+}
+
+.background {
+    background-color: #6b6b6b; /* สีพื้นหลังของกล่อง */
+    padding: 20px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
+    width: 990px; /* ความกว้างของกล่อง */
+    height: 500px; /* ความสูงของกล่อง */
+    border-radius: 15px; /* ความมนของมุมกล่อง */
+    transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
+    /*display: flex;*/ /* ใช้ Flexbox */
+    /*align-items: flex-start;*/ /* จัดกล่องแนวตั้งที่ด้านบนสุด */
+    /*justify-content: flex-start;*/ /* จัดกล่องแนวนอนที่ด้านซ้ายสุด */
+    /*overflow: auto;*/ /* จัดการการล้นของเนื้อหา (ถ้ามี) */
+
+}
+
+.flex {
+    display: flex; /* ใช้ Flexbox */
+    gap: 5px; /* ระยะห่างระหว่างกล่อง */
+    /*align-items: flex-start; /* จัดกล่องให้ชิดด้านบนสุด */
+}
+
+.grid {
+    display: grid;
+    /*-align: center;*/
+    /*justify-content: center;*/
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: auto;
+    column-gap: 0px;
+    row-gap: 25px;
+}
+
+.item {
+    background-color: #ffffff; /* สีพื้นหลังของกล่อง */
+    padding: 10px; /* ช่องว่างภายในกล่อง */
+    width: 60px; /* ความกว้างของกล่อง */
+    height: 100px; /* ความสูงของกล่อง */
+    border-radius: 10px; /* ความมนของมุมกล่อง */
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
+
+    /* จัดการเนื้อหาใน item */
+    color: rgb(0, 0, 0); /* สีของตัวอักษร */
+    display: flex; /* ใช้ Flexbox สำหรับจัดตำแหน่งเนื้อหา */
+    flex-direction: column; /* วางเนื้อหาในแนวตั้ง */
+    align-items: center; /* จัดกลางเนื้อหาตามแนวนอน */
+}
+
+.item-1 {
+    grid-column: 1 / span 10;
+    height: 3px;
+    color: rgb(255, 255, 255);
+}
+
+.text-container {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: space-between; /* จัดให้ทั้งสองฝั่ง */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+}
+
+.text-1 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.status-wrapper {
+    display: flex;
+    align-items: center; /* จัดกลางแนวตั้ง */
+}
+
+.text-2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-right: 10px; /* ระยะห่างระหว่าง "สถานะ" กับ "รอดำเนินการ" */
+}
+
+.text-3 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: #bababa;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+
+.flex-center {
+    display: flex; 
+    flex-direction: center;
+}
+
+.full-width-line {
+    border-bottom: 2px solid #ffffff; /* สีขาวและความหนา 2px */
+    width: 100%; /* ความกว้างเต็ม */
+    position: absolute;
+}

@@ -9,9 +9,9 @@ type ResigningForm struct {
     gorm.Model
     Name			string
 	Date			time.Time
-    BecauseOf		string
+    Because_Of		string
 	Accommodation	string
-    PhoneNumber		string
+    Phone_Number	string
     Status			string
 
     // StudentID ทำหน้าที่เป็น FK

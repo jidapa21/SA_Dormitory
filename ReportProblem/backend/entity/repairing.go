@@ -7,9 +7,9 @@ type Repairing struct {
     Subject          string
     Detail           string
     Image            []byte // ใช้ []byte แทน blob
-    LocationDetails  string
+    Location_Details string
     Contact          string
-    TimeSlot         string
+    Time_Slot         string
     Remarks          string
     Status           string
 
