@@ -7,19 +7,19 @@ import (
 
 type DelayedPaymentForm struct {
     gorm.Model
-    Name			string
-    DormPayment		float64
-    ElectriclyBill  float64
-    WaterBill		float64
-    BecauseOf		string
-	DueDate			time.Time
-    Status			string
+    Name				string
+    Dorm_Payment		float64
+    Electricly_Bill		float64
+    Water_Bill			float64
+    Because_Of			string
+	Due_Date			time.Time
+    Status				string
 
     // StudentID ทำหน้าที่เป็น FK
-    StudentID  string
-    Student    Student `gorm:"foreignKey:StudentID"`
+    Student_ID	uint
+    Student		Student `gorm:"foreignKey:Student_ID"`
 
     // AdminID ทำหน้าที่เป็น FK
-    AdminID    string
-    Admin      Admin `gorm:"foreignKey:AdminID"`
+    Admin_ID	uint
+    Admin		Admin `gorm:"foreignKey:Admin_ID"`
 }

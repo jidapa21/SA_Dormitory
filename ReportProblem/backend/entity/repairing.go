@@ -14,10 +14,10 @@ type Repairing struct {
     Status           string
 
     // StudentID ทำหน้าที่เป็น FK
-    StudentID  string
-    Student    Student `gorm:"foreignKey:StudentID"`
+    Student_ID  uint
+    Student     Student `gorm:"foreignKey:Student_ID"`
 
     // AdminID ทำหน้าที่เป็น FK
-    AdminID    string
-    Admin      Admin `gorm:"foreignKey:AdminID"`
+    Admin_ID    uint
+    Admin       Admin `gorm:"foreignKey:Admin_ID"`
 }

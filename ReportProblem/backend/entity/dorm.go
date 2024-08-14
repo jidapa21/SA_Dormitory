@@ -4,9 +4,9 @@ import "gorm.io/gorm"
 
 type Dorm struct {
     gorm.Model
-    Type        string
-    DormGender  string
+    Type            string
+    Dorm_Gender     string
 
     // 1 หอพัก มีได้หลายห้อง
-    Rooms       []Room `gorm:"foreignKey:DormID"` 
+    Rooms       []Room `gorm:"foreignKey:Dorm_ID"` 
 }

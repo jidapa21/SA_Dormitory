@@ -4,11 +4,11 @@ import "gorm.io/gorm"
 
 type CurrentAddress struct {
     gorm.Model
-    HouseNo			string
-    VillageNo		string
+    House_No		string
+    Village_No		string
     Alley			string
     Road			string
-    SubDistrict		string
+    Sub_District	string
     District		string
     province		string
 	post_code		string
