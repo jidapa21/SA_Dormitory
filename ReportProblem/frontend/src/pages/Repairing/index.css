@@ -1,5 +1,5 @@
 .background {
-    background-color: #6b6b6b; /* สีพื้นหลังของกล่อง */
+    background-color: #ffffff; /* สีพื้นหลังของกล่อง */
     padding: 20px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
     width: 990px; /* ความกว้างของกล่อง */
     height: 500px; /* ความสูงของกล่อง */
@@ -12,11 +12,11 @@
 
 }
 
-.text-container {
+.title-1-flex {
     display: flex; /* ใช้ Flexbox */
     justify-content: space-between; /* จัดให้ทั้งสองฝั่ง */
     align-items: center; /* จัดกลางแนวตั้ง */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    margin-bottom: 10; /* ระยะห่างด้านล่าง */
 }
 
 .text-1 {
@@ -25,7 +25,7 @@
 }
 
 
-.text-2 {
+.status-text {
     color: rgb(255, 255, 255);
     font-size: 20px;
     margin-right: 10px; /* ระยะห่างระหว่าง "สถานะ" กับ "รอดำเนินการ" */
@@ -33,7 +33,7 @@
     right: 200px;
 }
 
-.text-3 {
+.status-textbox {
     color: rgb(255, 255, 255);
     font-size: 20px;
     background-color: #bababa;
@@ -44,7 +44,19 @@
 }
 
 .full-width-line {
-    border-bottom: 2px solid #ffffff; /* สีขาวและความหนา 2px */
-    width: 90%; /* ความกว้างเต็ม */
+    border-bottom: 2px solid #8a8a8a; /* สีขาวและความหนา 2px */
+    width: 89%; /* ความกว้างเต็ม */
     position: absolute;
+    justify-content: space-between; /* จัดให้ทั้งสองฝั่ง */
+    align-items: center; /* จัดกลางแนวตั้ง */
+}
+
+.title-2-flex {
+    display: flex; /* ใช้ Flexbox */
+    gap: 16px;
+}
+
+.name-text {
+    color: rgb(48, 48, 48);
+    font-size: 20px;
 }

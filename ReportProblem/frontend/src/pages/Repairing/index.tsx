@@ -11,16 +11,20 @@ import type { ColumnsType } from "antd/es/table";
 import "./index.css";
 
 interface DataType {
-  key:              string;
-  Subject:          string;
-  Detail:           string;
-  Image:            string;
+  key: string;
+  Subject: string;
+  Detail: string;
+  Image: string;
   Location_Details: string;
-  Contact:          string;
-  Time_Slot:        string;
-  Remarks:          string;
-  Status:           string;
-  Student_ID:       number;
+  Contact: string;
+  Time_Slot: string;
+  Remarks: string;
+  Status: string;
+  StudentID: string;
+  FirstName: string;
+  LastName: string;
+  Dorm: number;
+  Room: string;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -69,6 +73,11 @@ const columns: ColumnsType<DataType> = [
 const data: DataType[] = [
   {
     key: '1',
+    StudentID: 'B611253',
+    FirstName: 'นิติพล',
+    LastName: 'บางระมาด',
+    Dorm: 4,
+    Room: '414A',
     Subject: 'ซ่อมไฟฟ้า',
     Detail: 'หลอดไฟไม่ติด',
     Image: 'image_url',
@@ -85,20 +94,25 @@ export default function index() {
   return (
     <>
       <br />
-      <div className='text-container'>
-        <div className='text-1'>
-          แจ้งซ่อม
-        </div>
-          <div className='text-2'>
-            สถานะ
-          </div>
-          <div className='text-3'>
-            <div>{filteredData[0].Status}</div>
-          </div>
+      <div className='title-1-flex'>
+        <div className='text-1'>แจ้งซ่อม</div>
+        <div className='status-text'>สถานะ</div>
+        <div className='status-textbox'>{filteredData[0].Status}</div>
       </div>
       <br />
-      <div className="full-width-line-container">
-        <div className="full-width-line"></div>
+      <div className="full-width-line"></div>
+      <br />
+      <div className = 'title-2-flex'>
+      <div className='name-text'>ผู้รับบริการ</div>
+          <div className='name-text'>{filteredData[0].StudentID}</div>
+          <div className='name-text'>{filteredData[0].FirstName}</div>
+          <div className='name-text'>{filteredData[0].LastName}</div>
+      </div>
+      <div className = 'title-2-flex'>
+          <div className='name-text'>อาคาร</div>
+          <div className='name-text'>{filteredData[0].Dorm}</div>
+          <div className='name-text'>ห้อง</div>
+          <div className='name-text'>{filteredData[0].Room}</div>
       </div>
 
     </>
