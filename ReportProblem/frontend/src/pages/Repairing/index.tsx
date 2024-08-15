@@ -17,40 +17,32 @@ import "./index.css";
 export default function index() {
   return (
     <>
-      <div className='container-1'>
-        <div className='title-1-flex'>
-          <div className='text-1'>แจ้งซ่อม</div>
-          <div className='status-text'>สถานะ</div>
-          <div className='status-textbox'>รอดำเนินการ</div>
-        </div>
+    
+      <div className='title-1-flex'>
+        <div className='text-1'>แจ้งซ่อม</div>
+        <div className='status-text'>สถานะ</div>
+        <div className='status-textbox'>รอดำเนินการ</div>
       </div>
       <br />
       <div className="full-width-line"></div>
       <br />
       <div className="background">
-        <Row align={"middle"} justify={"center"}>
-          <Col xs={24} sm={24} md={24} lg={10} xl={10}>
-            <Card title="เนื้อหาตรงกลาง">
-              <p>ผู้รับบริการ</p>
-              <p>B191563</p>
-              <p>มนัสเต</p>
-              <p>สวัสดิกะ</p>
-            </Card>
+        <div className="grid-form">
+          <div className="title-2-flex item1">
             <div className='name-text'>ผู้รับบริการ</div>
             <div className='name-text'>B191563</div>
             <div className='name-text'>มนัสเต</div>
             <div className='name-text'>สวัสดิกะ</div>
-          </Col>
-        </Row>
-        <Row align={"middle"} justify={"center"}>
-          <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+          </div>
+          <div className="title-2-flex item1">
             <div className='name-text'>อาคาร</div>
             <div className='name-text'>4</div>
             <div className='name-text'>ห้อง</div>
             <div className='name-text'>414A</div>
-          </Col>
-        </Row>
+          </div >
 
+        </div >
+        <div className="title-2-flex item2">
         <Col xs={10} sm={10} md={10} lg={10} xl={10}>
           <Form.Item
             label="หัวข้อการขอรับบริการ"
@@ -65,6 +57,7 @@ export default function index() {
             <Input />
           </Form.Item>
         </Col>
+        </div>
         <Col xs={10} sm={10} md={10} lg={10} xl={10}>
           <Form.Item
             label="รายละเอียดการขอรับบริการ"
