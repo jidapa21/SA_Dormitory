@@ -1,61 +1,15 @@
 .background {
-    background-color: #d5d5d5;
-    /* สีพื้นหลังของกล่อง */
-    padding: 5%; /* ปรับช่องว่างภายในกล่องเป็นเปอร์เซ็นต์ของขนาดหน้าต่าง */
-    width: 50%; /* ความกว้างของกล่องปรับตาม 80% ของความกว้างหน้าจอ */
-    height: auto; /* ความสูงของกล่องปรับตาม 50% ของความสูงหน้าจอ */
+    background-color: #94abc8; /* สีพื้นหลังของกล่อง */
+    padding: 20px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
+    width: 990px; /* ความกว้างของกล่อง */
+    height: 500px; /* ความสูงของกล่อง */
     border-radius: 15px; /* ความมนของมุมกล่อง */
-    transition: all 0.5s;
-    display: flex;
-    justify-content: flex-start; /* จัดข้อความให้กลางแนวนอน */
-    align-items: flex-start; /* จัดข้อความให้กลางแนวตั้ง */
-    /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
-    /*display: flex;*/
-    /* ใช้ Flexbox */
-    /*align-items: center;*/
-    /* จัดกล่องแนวตั้งที่ด้านบนสุด */
-    /*justify-content: flex-start;*/
-    /* จัดกล่องแนวนอนที่ด้านซ้ายสุด */
-    /*overflow: auto;*/
-    /* จัดการการล้นของเนื้อหา (ถ้ามี) */
-}
+    transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
+    /*display: flex;*/ /* ใช้ Flexbox */
+    /*align-items: flex-start;*/ /* จัดกล่องแนวตั้งที่ด้านบนสุด */
+    /*justify-content: flex-start;*/ /* จัดกล่องแนวนอนที่ด้านซ้ายสุด */
+    /*overflow: auto;*/ /* จัดการการล้นของเนื้อหา (ถ้ามี) */
 
-.container-1 {
-    background-color: #efefef;
-    /* สีพื้นหลังของกล่อง */
-    padding: 5%; /* ปรับช่องว่างภายในกล่องเป็นเปอร์เซ็นต์ของขนาดหน้าต่าง */
-    width: 50%; /* ความกว้างของกล่องปรับตาม 80% ของความกว้างหน้าจอ */
-    height: auto; /* ความสูงของกล่องปรับตาม 50% ของความสูงหน้าจอ */
-    border-radius: 15px; /* ความมนของมุมกล่อง */
-    transition: all 0.5s;
-}
-
-.container-2 {
-    background-color: #d5d5d5;
-    /* สีพื้นหลังของกล่อง */
-    padding: 5%; /* ปรับช่องว่างภายในกล่องเป็นเปอร์เซ็นต์ของขนาดหน้าต่าง */
-    width: 50%; /* ความกว้างของกล่องปรับตาม 80% ของความกว้างหน้าจอ */
-    height: auto; /* ความสูงของกล่องปรับตาม 50% ของความสูงหน้าจอ */
-    border-radius: 15px; /* ความมนของมุมกล่อง */
-    transition: all 0.5s;
-}
-.container-3 {
-    background-color: #d5d5d5;
-    /* สีพื้นหลังของกล่อง */
-    padding: 5%; /* ปรับช่องว่างภายในกล่องเป็นเปอร์เซ็นต์ของขนาดหน้าต่าง */
-    width: 50%; /* ความกว้างของกล่องปรับตาม 80% ของความกว้างหน้าจอ */
-    height: auto; /* ความสูงของกล่องปรับตาม 50% ของความสูงหน้าจอ */
-    border-radius: 15px; /* ความมนของมุมกล่อง */
-    transition: all 0.5s;
-}
-.container-4 {
-    background-color: #d5d5d5;
-    /* สีพื้นหลังของกล่อง */
-    padding: 5%; /* ปรับช่องว่างภายในกล่องเป็นเปอร์เซ็นต์ของขนาดหน้าต่าง */
-    width: 50%; /* ความกว้างของกล่องปรับตาม 80% ของความกว้างหน้าจอ */
-    height: auto; /* ความสูงของกล่องปรับตาม 50% ของความสูงหน้าจอ */
-    border-radius: 15px; /* ความมนของมุมกล่อง */
-    transition: all 0.5s;
 }
 
 .title-1-flex {
@@ -65,14 +19,14 @@
     /* จัดให้ทั้งสองฝั่ง */
     align-items: center;
     /* จัดกลางแนวตั้ง */
-    margin-bottom: 10;
-    /* ระยะห่างด้านล่าง */
 }
 
 .title-2-flex {
     display: flex;
     /* ใช้ Flexbox */
     gap: 16px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .form-flex {
@@ -84,19 +38,16 @@
     font-size: 30px;
 }
 
-.text-2 {
-    color: rgb(48, 48, 48);
-    font-size: 16px;
-}
-
 .status-text {
     color: rgb(48, 48, 48);
     font-size: 20px;
     position: absolute;
     right: 240px;
     display: flex;
-    justify-content: flex-end; /* จัดข้อความให้กลางแนวนอน */
-    align-items: flex-end; /* จัดข้อความให้กลางแนวตั้ง */
+    justify-content: flex-end;
+    /* จัดข้อความให้กลางแนวนอน */
+    align-items: flex-end;
+    /* จัดข้อความให้กลางแนวตั้ง */
 }
 
 .status-textbox {
@@ -109,8 +60,10 @@
     position: absolute;
     right: 55px;
     display: flex;
-    justify-content: center; /* จัดข้อความให้กลางแนวนอน */
-    align-items: center; /* จัดข้อความให้กลางแนวตั้ง */
+    justify-content: center;
+    /* จัดข้อความให้กลางแนวนอน */
+    align-items: center;
+    /* จัดข้อความให้กลางแนวตั้ง */
 }
 
 .full-width-line {
@@ -128,17 +81,15 @@
     font-size: 20px;
 }
 
-.grid-form {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(10,1fr);
-    gap: 10px;
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* ระยะห่างระหว่างแต่ละกลุ่มข้อมูล */
+  }
+
+.flex1 {
+    display: flex;
+    gap: 10px; /* เพิ่มช่องว่างระหว่างองค์ประกอบ */
 }
 
-.item1 {
-    grid-column: 1/4;
-}
-
-.item2 {
-    grid-column: 2/4;
-}
+  

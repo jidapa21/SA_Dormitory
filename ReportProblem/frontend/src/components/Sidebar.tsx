@@ -24,23 +24,23 @@ function Sidebar({ children }: SidebarProps) {
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/List">
           <div className='link_text'>รายชื่อผู้พักร่วม</div>
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/Report">
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/repairing">
           <div className='link_text'>แจ้งซ่อม</div>
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/Form1">
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/DelayedPaymentForm">
           <div className='link_text'>ผ่อนผัน</div>
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/Form2">
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/En_ExitingForm">
           <div className='link_text'>ขออนุญาต</div>
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/Form3">
+        <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/resigningform">
           <div className='link_text'>ลาออก</div>
         </NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/Status">
           <div className='link_text'>ติดตามสถานะ</div>
         </NavLink>
         <NavLink className={({ isActive }) => (isActive ? "link active" : "link")} to="/LogOut">
-          <div className='link_text'>ออกจากระบบ</div>
+          <div className='link_text button'>ออกจากระบบ</div>
         </NavLink>
       </div>
       <main>{children}</main>
@@ -49,14 +49,3 @@ function Sidebar({ children }: SidebarProps) {
 }
 
 export default Sidebar;
-
-
-/*{menuItem.map((item, index) => (
-          <NavLink
-            to={item.path}
-            key={index}
-            className={({ isActive }) => (isActive ? "link active" : "link")}
-          >
-            <div className='link_text'>{item.name}</div>
-          </NavLink>
-        ))}*/
