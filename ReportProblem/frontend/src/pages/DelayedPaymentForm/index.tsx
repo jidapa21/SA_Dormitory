@@ -32,6 +32,7 @@ export default function index() {
             <br />
             <div className="full-width-line"></div>
             <br />
+            <div className="container">
             <div className="background">
                 <div className="flex-form">
                     <div className='name-text flex1'>
@@ -143,7 +144,7 @@ export default function index() {
                         </Row>
 
                     </Form>
-
+                    </div>
                 </div>
             </div >
         </>

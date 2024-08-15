@@ -1,15 +1,17 @@
+.container {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดกลางแนวนอน */
+    /*align-items: center;*/ /* จัดกลางแนวตั้ง */
+    height: 100vh; /* ความสูง 100% ของ viewport */
+}
+
 .background {
     background-color: #94abc8; /* สีพื้นหลังของกล่อง */
-    padding: 20px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
-    width: 990px; /* ความกว้างของกล่อง */
+    padding: 10px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
+    width: 70%; /* ความกว้างของกล่อง */
     height: 500px; /* ความสูงของกล่อง */
     border-radius: 15px; /* ความมนของมุมกล่อง */
     transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
-    /*display: flex;*/ /* ใช้ Flexbox */
-    /*align-items: flex-start;*/ /* จัดกล่องแนวตั้งที่ด้านบนสุด */
-    /*justify-content: flex-start;*/ /* จัดกล่องแนวนอนที่ด้านซ้ายสุด */
-    /*overflow: auto;*/ /* จัดการการล้นของเนื้อหา (ถ้ามี) */
-
 }
 
 .title-1-flex {
