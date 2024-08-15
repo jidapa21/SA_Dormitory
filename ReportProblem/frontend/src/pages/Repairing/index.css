@@ -1,5 +1,5 @@
 .background {
-    background-color: #ffffff; /* สีพื้นหลังของกล่อง */
+    background-color: #e3e3e3; /* สีพื้นหลังของกล่อง */
     padding: 20px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
     width: 990px; /* ความกว้างของกล่อง */
     height: 500px; /* ความสูงของกล่อง */
@@ -20,21 +20,20 @@
 }
 
 .text-1 {
-    color: rgb(255, 255, 255);
+    color: rgb(48, 48, 48);
     font-size: 30px;
 }
 
 
 .status-text {
-    color: rgb(255, 255, 255);
+    color: rgb(48, 48, 48);
     font-size: 20px;
-    margin-right: 10px; /* ระยะห่างระหว่าง "สถานะ" กับ "รอดำเนินการ" */
     position: absolute;
     right: 200px;
 }
 
 .status-textbox {
-    color: rgb(255, 255, 255);
+    color: rgb(48, 48, 48);
     font-size: 20px;
     background-color: #bababa;
     border-radius: 10px;
