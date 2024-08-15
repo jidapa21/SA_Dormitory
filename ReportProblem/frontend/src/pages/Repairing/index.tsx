@@ -11,15 +11,16 @@ import type { ColumnsType } from "antd/es/table";
 import "./index.css";
 
 interface DataType {
-  key: string;
-  Subject: string;
-  Detail: string;
-  Image: string;
+  key:              string;
+  Subject:          string;
+  Detail:           string;
+  Image:            string;
   Location_Details: string;
-  Contact: string;
-  Time_Slot: string;
-  Remarks: string;
-  Status: string;
+  Contact:          string;
+  Time_Slot:        string;
+  Remarks:          string;
+  Status:           string;
+  Student_ID:       number;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -88,14 +89,12 @@ export default function index() {
         <div className='text-1'>
           แจ้งซ่อม
         </div>
-        <div className='status-wrapper'>
           <div className='text-2'>
             สถานะ
           </div>
           <div className='text-3'>
             <div>{filteredData[0].Status}</div>
           </div>
-        </div>
       </div>
       <br />
       <div className="full-width-line-container">

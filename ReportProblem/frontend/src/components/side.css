@@ -1,59 +1,59 @@
 *{
-    margin:0;
-    padding:0;
-    text-decoration: none;
-  }
-  
-  .container{
-    display:flex;
-  }
-  
-  main{
-    width: 100%;
-    padding: 20px;
-  }
-  
-.sidebar{
-    background: #454545;
-    color: #ffffff;
-    width: 200px;
-    height: auto;
-    display: flex; /* ใช้ Flexbox สำหรับจัดตำแหน่งเนื้อหา */
-    flex-direction: column; /* วางเนื้อหาในแนวตั้ง */
-    align-items: center; /* จัดกลางเนื้อหาตามแนวนอน */
+  margin:0;
+  padding:0;
+  text-decoration: none;
 }
-  
-  .top_section{
-    display: flex;
-    align-items:center;
-    padding:20px 15px;
-  }
-  
-  .top_section img{
-    width: 90px; /* กำหนดขนาดของรูปภาพให้เป็นสี่เหลี่ยมจัตุรัส */
-    border-radius: 50%; /* ทำให้มุมของรูปภาพกลมทั้งหมด */
-    object-fit: cover; /* ครอบตัดรูปภาพเพื่อให้พอดีกับกรอบ */
-  }
-  
-  .link{
-    display: flex;
-    color: #ffffff;
-    padding: 10px 15px;
-    gap: 15px;
-    transition: all 0.5s;
-  }
-  
-  .link:hover{
-    background:rgb(159, 159, 159);
-    color: #0032e5;
-    transition: all 0.5s;
-  }
-  
-  .active{
-    background: rgb(255, 236, 236);
-    color: #e60000;
-  }
-  
-  .icon, .link_text{
-    font-size: 20px;
-  }
+
+.container{
+  display:flex;
+}
+
+main{
+  width: 100%;
+  padding: 20px;
+}
+
+.sidebar{
+  background: #454545;
+  color: #ffffff;
+  width: 200px;
+  height: auto;
+  display: flex; /* ใช้ Flexbox สำหรับจัดตำแหน่งเนื้อหา */
+  flex-direction: column; /* วางเนื้อหาในแนวตั้ง */
+  align-items: center; /* จัดกลางเนื้อหาตามแนวนอน */
+}
+
+.top_section{
+  display: flex;
+  align-items:center;
+  padding:20px 15px;
+}
+
+.top_section img{
+  width: 90px; /* กำหนดขนาดของรูปภาพให้เป็นสี่เหลี่ยมจัตุรัส */
+  border-radius: 50%; /* ทำให้มุมของรูปภาพกลมทั้งหมด */
+  object-fit: cover; /* ครอบตัดรูปภาพเพื่อให้พอดีกับกรอบ */
+}
+
+.link{
+  display: flex;
+  color: #ffffff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.link:hover{
+  background:rgb(159, 159, 159);
+  color: #0032e5;
+  transition: all 0.5s;
+}
+
+.active{
+  background: rgb(255, 236, 236);
+  color: #e60000;
+}
+
+.icon, .link_text{
+  font-size: 20px;
+}

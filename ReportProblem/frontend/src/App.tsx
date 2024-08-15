@@ -8,7 +8,7 @@ function App()  {
     <BrowserRouter>
       <Sidebar>
           <Routes>
-            <Route path='/' element={<Repairing  />} />
+            <Route path='/Report' element={<Repairing  />} />
           </Routes>
       </Sidebar>
     </BrowserRouter>
