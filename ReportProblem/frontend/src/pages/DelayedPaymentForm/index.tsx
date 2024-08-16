@@ -63,12 +63,6 @@ export default function index() {
                                 <Form.Item
                                     label="ค่าหอพัก"
                                     name="dorm_payment"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: "กรุณากรอกหัวข้อการขอรับบริการ !",
-                                        },
-                                    ]}
                                 >
                                     <Input />
                                 </Form.Item>
@@ -78,12 +72,6 @@ export default function index() {
                                 <Form.Item
                                     label="ค่าไฟฟ้า"
                                     name="electricly_bill"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: "กรุณากรอกรายละเอียดการขอรับบริการ !",
-                                        },
-                                    ]}
                                 >
                                     <Input />
                                 </Form.Item>
@@ -93,12 +81,6 @@ export default function index() {
                                 <Form.Item
                                     label="ค่าน้ำ"
                                     name="water_bill"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: "กรุณากรอกรายละเอียดการขอรับบริการ !",
-                                        },
-                                    ]}
                                 >
                                     <Input />
                                 </Form.Item>
@@ -106,16 +88,16 @@ export default function index() {
 
                             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                                 <Form.Item
-                                    label="ทั้งนี้เนื่องจาก"
+                                    label="เนื่องจาก"
                                     name="because_of"
                                     rules={[
                                         {
                                             required: true,
-                                            message: "กรุณากรอกรายละเอียด !",
+                                            message: "กรุณากรอกเหตุผลในการขอผ่อนผันชำระ !",
                                         },
                                     ]}
                                 >
-                                    <Input />
+                                    <Input.TextArea />
                                 </Form.Item>
                             </Col>
 

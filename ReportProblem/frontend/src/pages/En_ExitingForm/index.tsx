@@ -66,9 +66,11 @@ export default function index() {
                       },
                     ]}>
                     <Radio.Group onChange={onChange} value={value}>
-                      <Radio value={1}>ขอกลับหอพักหลังเวลาปิดหอพัก</Radio>
-                      <Radio value={2}>ขอออกจากหอพักก่อนเวลาเปิดหอพัก</Radio>
-                      <Radio value={3}>ค้างคืนนอกหอพัก</Radio>
+                      <Space direction="vertical">
+                        <Radio value="ขอกลับหอพักหลังเวลาปิดหอพัก">ขอกลับหอพักหลังเวลาปิดหอพัก</Radio>
+                        <Radio value="ขอออกจากหอพักก่อนเวลาเปิดหอพัก">ขอออกจากหอพักก่อนเวลาเปิดหอพัก</Radio>
+                        <Radio value="ค้างคืนนอกหอพัก">ค้างคืนนอกหอพัก</Radio>
+                      </Space>
                     </Radio.Group>
                   </Form.Item>
                 </Col>

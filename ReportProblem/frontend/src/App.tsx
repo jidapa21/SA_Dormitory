@@ -15,12 +15,12 @@ const App: React.FC = () => {
       <Sidebar>
         <Routes>
           <Route path='/' element={<Announcement />} />
-          <Route path='/Repairing' element={<Repairing  />} />
-            <Route path='/ResigningForm' element={<ResigningForm  />} />
-            <Route path='/En_ExitingForm' element={<En_ExitingForm  />} />
-            <Route path='/DelayedPaymentForm' element={<DelayedPaymentForm  />} /> 
+          <Route path='/Repairing' element={<Repairing />} />
+          <Route path='/ResigningForm' element={<ResigningForm />} />
+          <Route path='/En_ExitingForm' element={<En_ExitingForm />} />
+          <Route path='/DelayedPaymentForm' element={<DelayedPaymentForm />} />
           <Route path='/Announcement' element={<Announcement />} />
-          <Route path='/Status' element={<Status  />} />
+          <Route path='/Status' element={<Status />} />
           <Route path='/PaymentConfirmation' element={<PaymentConfirmation />} />
         </Routes>
       </Sidebar>

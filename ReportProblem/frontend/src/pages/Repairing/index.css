@@ -13,6 +13,13 @@
     border-radius: 15px; /* ความมนของมุมกล่อง */
     transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
 }
+.container-2 {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+    width: 90%;
+    height: auto; /* ความสูง 100% ของ viewport */
+}
 
 .title-1-flex {
     display: flex;

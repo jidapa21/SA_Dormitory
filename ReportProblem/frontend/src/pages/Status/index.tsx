@@ -1,46 +1,110 @@
-import React from 'react'
-import { NavLink ,Link} from 'react-router-dom';
-import "./index.css";
+import {
+  Table,
+  Tag,
+} from 'antd';
+import { PlusOutlined } from "@ant-design/icons";
+import type { ColumnsType } from "antd/es/table";
+import { Link } from 'react-router-dom';
+import React from 'react';
 
-function Index() {
-    return (
-      <>
-        <br />
-        <div className='text-container'>
-            <div className='text-1'>ติดตามสถานะของปัญหา</div>
-        </div>
-        <div className='grid1'>
-            <div className='item item1'>ลำดับ</div>
-            <div className='item item1'>หัวข้อของปัญหา/แบบฟอร์ม</div>
-            <div className='item item1'>ประเภทปัญหา</div>
-            <div className='item item1'>สถานะ</div>
-        </div>
-        <div className='grid2'>
-            <div className='item item2'>1</div>
-            <div className='item item2'>ฟอร์มขออนุญาติเข้า-ออกหอพัก</div>
-            <div className='item item2'>ฟอร์มเอกสาร</div>
-            <div className='item item2'>รอการตรวจสอบ</div>
-        </div>
-        <div className='grid2'>
-            <div className='item item2'>2</div>
-            <div className='item item2'>เครื่องทำน้ำอุ่น</div>
-            <div className='item item2'>แจ้งซ่อม</div>
-            <div className='item item2'>กำลังดำเนินการ</div>
-        </div>
-        <div className='grid2'>
-            <div className='item item2'>3</div>
-            <div className='item item2'>ฟอร์มผ่อนผัน</div>
-            <div className='item item2'>ฟอร์มเอกสาร</div>
-            <div className='item item2'>อนุมัติ</div>
-        </div>
-        <div className='grid2'>
-            <div className='item item2'>4</div>
-            <div className='item item2'>อ่างล้างหน้าตัน</div>
-            <div className='item item2'>แจ้งซ่อม</div>
-            <div className='item item2'>ซ่อมเสร็จแล้ว</div>
-        </div>
-        <br />
-        </>
-    );
+interface DataType {
+  key: string;
+  no: string;
+  subject: string;
+  type: string;
+  state: string[];
 }
-export default Index
+
+const Index: React.FC = () => {
+  const columns = [
+    {
+      title: 'ลำดับ',
+      dataIndex: 'no',
+      key: 'no',
+      render: (text: string) => <a>{text}</a>,
+    },
+    {
+      title: 'หัวข้อ',
+      dataIndex: 'subject',
+      key: 'subject',
+    },
+    {
+      title: 'ประเภท',
+      dataIndex: 'type',
+      key: 'type',
+    },
+    {
+      title: 'สถานะ',
+      key: 'state',
+      dataIndex: 'state',
+      render: (state: string[]) => (
+        <>
+          {state.map((state: string) => {
+            let color: string;
+            if (state === 'รอการตรวจสอบ') {
+              color = 'gray';
+            } else if (state === 'กำลังดำเนินการ') {
+              color = 'yellow';
+            } else if (state === 'อนุมัติ') {
+              color = 'green';
+            } else if (state === 'เสร็จสิ้น') {
+              color = 'green';
+            } else {
+              color = 'default';
+            }
+            return (
+              <Tag color={color} key={state}>
+                {state.toUpperCase()}
+              </Tag>
+            );
+          })}
+        </>
+      ),
+    }
+  ];
+
+  const data: DataType[] = [
+    {
+      key: '1',
+      no: '1',
+      subject: 'ฟอร์มขออนุญาติเข้า-ออกหอพัก',
+      type: 'ฟอร์มเอกสาร',
+      state: ['รอการตรวจสอบ'],
+    },
+    {
+      key: '2',
+      no: '2',
+      subject: 'เครื่องทำน้ำอุ่นไม่ทำงาน',
+      type: 'แจ้งซ่อม',
+      state: ['กำลังดำเนินการ'],
+    },
+    {
+      key: '3',
+      no: '3',
+      subject: 'ฟอร์มผ่อนผัน',
+      type: 'ฟอร์มเอกสาร',
+      state: ['อนุมัติ'],
+    },
+    {
+      key: '4',
+      no: '4',
+      subject: 'อ่างล้างหน้าตัน',
+      type: 'แจ้งซ่อม',
+      state: ['เสร็จสิ้น'],
+    },
+  ];
+
+  return (
+    <>
+      <br />
+      <div className='text-container'>
+        <div className='text-1'>ติดตามสถานะของปัญหา</div>
+      </div>
+      <br />
+      <br />
+      <Table columns={columns} dataSource={data} />
+    </>
+  );
+};
+
+export default Index;
