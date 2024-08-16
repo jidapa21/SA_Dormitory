@@ -1,22 +1,16 @@
 import {
     Button,
-    Card,
     Space,
     Form,
     Input,
-    message,
-    Flex,
-    Divider,
     Row,
     Col,
-    InputNumber,
     DatePicker,
-    Select,
 } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import type { ColumnsType } from "antd/es/table";
 import { NavLink, Link } from 'react-router-dom';
-import "./index.css";
+import "./../Repairing/index.css";
 
 export default function index() {
 

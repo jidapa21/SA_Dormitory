@@ -18,7 +18,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import type { ColumnsType } from "antd/es/table";
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import "./index.css";
+import "./../Repairing/index.css";
 
 export default function index() {
 

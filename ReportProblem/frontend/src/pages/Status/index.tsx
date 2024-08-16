@@ -2,9 +2,6 @@ import {
   Table,
   Tag,
 } from 'antd';
-import { PlusOutlined } from "@ant-design/icons";
-import type { ColumnsType } from "antd/es/table";
-import { Link } from 'react-router-dom';
 import React from 'react';
 
 interface DataType {
@@ -91,7 +88,7 @@ const Index: React.FC = () => {
       subject: 'อ่างล้างหน้าตัน',
       type: 'แจ้งซ่อม',
       state: ['เสร็จสิ้น'],
-    },
+    }
   ];
 
   return (

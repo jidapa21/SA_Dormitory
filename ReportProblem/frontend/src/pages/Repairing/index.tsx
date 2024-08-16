@@ -1,20 +1,12 @@
 import {
   Button,
-  Card,
   Form,
   Input,
-  message,
-  Flex,
-  Divider,
   Row,
   Space,
   Col,
   Upload,
-  InputNumber,
-  DatePicker,
-  Select,
 } from "antd";
-import type { ColumnsType } from "antd/es/table";
 import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
 import "./index.css";

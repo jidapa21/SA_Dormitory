@@ -97,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             {dropdownMenu}
           </Menu.SubMenu>
           <Menu.Item key="3" onClick={() => handleMenuClick('3')}>
-            สถานะ
+            ติดตามสถานะ
           </Menu.Item>
           <Menu.Item key="paymentConfirmation" onClick={() => handleMenuClick('paymentConfirmation')}>
             ยืนยันการชำระ
