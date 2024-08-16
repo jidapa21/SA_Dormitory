@@ -8,5 +8,5 @@ type Dorm struct {
     Dorm_Gender     string
 
     // 1 หอพัก มีได้หลายห้อง
-    Rooms       []Room `gorm:"foreignKey:Dorm_ID"` 
+    Rooms       []Room `gorm:"foreignKey:Dorm_ID"`
 }

@@ -42,119 +42,88 @@ export default function index() {
       <div className="full-width-line"></div>
       <br />
       <div className="container">
-      <div className="background">
-        <div className="flex-form">
-          <div className='title-1-flex name-text'>
-            <div className=' flex1'>
+        <div className="background">
+          <div className="flex-form">
+            <div className='name-text flex1'>
               <div>ผู้ทำเรื่อง</div>
               <div>B191563</div>
               <div>มนัสเต</div>
               <div>สวัสดิกะ</div>
-            </div>
-            <div className='flex2'>
-              <div>วันที่ทำเรื่อง</div>
-              <div>B191563</div><br />
+              <br />
               <br />
             </div>
 
-          </div>
 
-
-          <Form layout="inline">
-            <Row gutter={64}>
-              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                <Form.Item label="เรื่องที่ขอ">
-                  <Radio.Group onChange={onChange} value={value}>
-                    <Radio value={1}>ขอกลับหอพักหลังเวลาปิดหอพัก</Radio>
-                    <Radio value={2}>ขอออกจากหอพักก่อนเวลาเปิดหอพัก</Radio>
-                    <Radio value={3}>ค้างคืนนอกหอพัก</Radio>
-                  </Radio.Group>
-                </Form.Item>
-              </Col>
-
-              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                <Form.Item
-                  label="ค่าไฟฟ้า"
-                  name="electricly_bill"
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณากรอกรายละเอียดการขอรับบริการ !",
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </Col>
-
-              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                <Form.Item
-                  label="ค่าน้ำ"
-                  name="water_bill"
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณากรอกรายละเอียดการขอรับบริการ !",
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </Col>
-
-              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                <Form.Item
-                  label="ทั้งนี้เนื่องจาก"
-                  name="because_of"
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณากรอกรายละเอียด !",
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </Col>
-
-              <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                <Form.Item
-                  label="ชำระภายในวันที่"
-                  name="due_date"
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณาเลือกวัน/เดือน/ปี !",
-                    },
-                  ]}
-                >
-                  <DatePicker style={{ width: "100%" }} />
-                </Form.Item>
-              </Col>
-            </Row>
-            <Row justify="end">
-              <Col style={{ marginTop: "40px" }}>
-                <Form.Item>
-                  <Space>
-                    <Link to="/">
-                      <Button htmlType="button" style={{ marginRight: "10px" }}>
-                        ยกเลิก
+            <Form layout="vertical">
+              <Row gutter={64}>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item label="เรื่องที่ขอ:"
+                    name="request"
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณาเลือกเรื่องที่ขออนุญาติ !",
+                      },
+                    ]}>
+                    <Radio.Group onChange={onChange} value={value}>
+                      <Radio value={1}>ขอกลับหอพักหลังเวลาปิดหอพัก</Radio>
+                      <Radio value={2}>ขอออกจากหอพักก่อนเวลาเปิดหอพัก</Radio>
+                      <Radio value={3}>ค้างคืนนอกหอพัก</Radio>
+                    </Radio.Group>
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item
+                    label="เนื่องจาก"
+                    name="because_of "
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณากรอกเหตุผลในการขออนุญาติเข้า-ออกหอพัก !",
+                      },
+                    ]}
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item
+                    label="วันที่ขออนุญาติ"
+                    name="date_request"
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณาเลือกวัน/เดือน/ปี !",
+                      },
+                    ]}
+                  >
+                    <DatePicker style={{ width: "100%" }} />
+                  </Form.Item>
+                </Col>
+              </Row>
+              <Row justify="end">
+                <Col style={{ marginTop: "40px" }}>
+                  <Form.Item>
+                    <Space>
+                      <Link to="/">
+                        <Button htmlType="button" style={{ marginRight: "10px" }}>
+                          ยกเลิก
+                        </Button>
+                      </Link>
+                      <Button
+                        type="primary"
+                        htmlType="submit"
+                        icon={<PlusOutlined />}
+                      >
+                        ยืนยัน
                       </Button>
-                    </Link>
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      icon={<PlusOutlined />}
-                    >
-                      ยืนยัน
-                    </Button>
-                  </Space>
-                </Form.Item>
-              </Col>
-            </Row>
+                    </Space>
+                  </Form.Item>
+                </Col>
+              </Row>
 
-          </Form>
-        </div>
+            </Form>
+          </div>
         </div>
       </div >
     </>

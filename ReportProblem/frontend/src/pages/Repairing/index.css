@@ -78,6 +78,17 @@
     /* จัดกลางแนวตั้ง */
 }
 
+.width-line {
+    border-bottom: 2px solid #b9b9b9;
+    /* สีขาวและความหนา 2px */
+    width: 80%;
+    /* ความกว้างเต็ม */
+    position: absolute;
+    align-items: center;
+    /* จัดกลางแนวตั้ง */
+}
+
+
 .name-text {
     color: rgb(48, 48, 48);
     font-size: 20px;
