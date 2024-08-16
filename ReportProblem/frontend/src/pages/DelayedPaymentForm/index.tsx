@@ -27,6 +27,7 @@ export default function index() {
 
     return (
         <>
+        <br />
             <div className='title-1-flex'>
                 <div className='text-1'>
                     แบบฟอร์มขอผ่อนผันการชำระ

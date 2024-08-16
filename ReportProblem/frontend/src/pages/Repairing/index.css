@@ -6,19 +6,12 @@
 }
 
 .background {
-    background-color: #c3eaff; /* สีพื้นหลังของกล่อง */
     padding: 10px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
     width: 70%; /* ความกว้างของกล่อง */
     height: auto; /* ความสูงของกล่อง */
     border-radius: 15px; /* ความมนของมุมกล่อง */
     transition: all 0.5s; /* การเปลี่ยนแปลงที่เรียบเนียนภายใน 0.5 วินาที */
-}
-.container-2 {
-    display: flex; /* ใช้ Flexbox */
-    justify-content: center; /* จัดกลางแนวนอน */
-    align-items: center; /* จัดกลางแนวตั้ง */
-    width: 90%;
-    height: auto; /* ความสูง 100% ของ viewport */
+    border: 1px solid #d9d9d9;
 }
 
 .title-1-flex {
@@ -76,9 +69,9 @@
 }
 
 .full-width-line {
-    border-bottom: 2px solid #b9b9b9;
+    border-bottom: 2px solid #f5f5f5;
     /* สีขาวและความหนา 2px */
-    width: 86%;
+    width: 83%;
     /* ความกว้างเต็ม */
     position: absolute;
     align-items: center;
@@ -86,12 +79,12 @@
 }
 
 .width-line {
-    border-bottom: 2px solid #b9b9b9;
+    border-bottom: 2px solid #f5f5f5;
     /* สีขาวและความหนา 2px */
-    width: 80%;
+    width: 1350%;
     /* ความกว้างเต็ม */
     position: absolute;
-    align-items: center;
+    /*align-items: center;*/
     /* จัดกลางแนวตั้ง */
 }
 
@@ -112,4 +105,14 @@
     gap: 10px; /* เพิ่มช่องว่างระหว่างองค์ประกอบ */
 }
 
+/* ResigningForm index.css */
+.ant-form-item-label {
+    text-align: left; /* จัดให้ตรงกับด้านซ้าย */
+  }
+  
+  .ant-form-item-label > label {
+    display: inline-block;
+    width: 200px; /* ปรับความกว้างให้ตรงกัน */
+    text-align: left; /* จัดให้ตัวอักษรตรงกับซ้าย */
+  }
   
