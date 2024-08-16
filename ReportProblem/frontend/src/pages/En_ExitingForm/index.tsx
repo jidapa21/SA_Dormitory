@@ -108,8 +108,8 @@ export default function index() {
                 <Col style={{ marginTop: "40px" }}>
                   <Form.Item>
                     <Space>
-                      <Link to="/">
-                        <Button htmlType="button" style={{ marginRight: "10px" }} onClick={handleReset}>
+                      <Link to="/En_ExitingForm">
+                        <Button htmlType="button" style={{ marginRight: "10px" }} onClick={() => {form.resetFields();}}>
                           ยกเลิก
                         </Button>
                       </Link>

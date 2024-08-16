@@ -9,7 +9,7 @@ type En_ExitingForm struct {
     gorm.Model
     Name			string
 	Date_Submission	time.Time
-	reques			string
+	request			string
     Because_Of		string
 	Date_Reques		time.Time
     Status			string

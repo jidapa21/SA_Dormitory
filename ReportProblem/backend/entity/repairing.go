@@ -9,8 +9,8 @@ type Repairing struct {
     Image            []byte // ใช้ []byte แทน blob
     Location_Details string
     Contact          string
-    Time_Slot         string
-    Remarks          string
+    Time_Slot        string
+    Remarks          *string
     Status           string
 
     // StudentID ทำหน้าที่เป็น FK

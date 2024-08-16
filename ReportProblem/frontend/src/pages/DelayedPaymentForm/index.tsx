@@ -115,7 +115,7 @@ export default function index() {
                             <Col style={{ marginTop: "40px" }}>
                                 <Form.Item>
                                     <Space>
-                                        <Link to="/">
+                                        <Link to="/DelayedPaymentForm">
                                             <Button htmlType="button" style={{ marginRight: "10px" }}>
                                                 ยกเลิก
                                             </Button>
