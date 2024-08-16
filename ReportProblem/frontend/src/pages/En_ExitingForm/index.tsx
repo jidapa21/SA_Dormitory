@@ -15,6 +15,8 @@ import "./../Repairing/index.css";
 
 export default function index() {
 
+  const [form] = Form.useForm(); // สร้าง reference สำหรับฟอร์ม
+
   const today = new Date();
   const formattedDate = today.toLocaleDateString();
 
@@ -25,9 +27,13 @@ export default function index() {
     setValue(e.target.value);
   };
 
+  const handleReset = () => {
+    form.resetFields(); // รีเซ็ตข้อมูลฟอร์ม
+  };
+
   return (
     <>
-    <br />
+      <br />
       <div className='title-1-flex'>
         <div className='text-1'>
           แบบฟอร์มขออนุญาติเข้า-ออกหอพักหลังเวลาปิดหอพัก/ค้างคืนนอกหอพัก
@@ -41,15 +47,16 @@ export default function index() {
       <div className="container">
         <div className="background">
           <div className="flex-form">
-          <div className='name-text title-1-flex'>
-              <div className=' flex1'>
-                <div>ผู้ทำเรื่อง</div> <div>B191563</div> <div>มนัสเต</div> <div>สวัสดิกะ</div>
+            <div className='name-text info-box title-1-flex'>
+              <div className='flex1'>
+                <div>ผู้ทำเรื่อง</div>
+                <div>B191563</div>
+                <div>กานต์รวี</div>
+                <div>นภารัตน์</div>
               </div>
-              <div className=' flex1'>
+              <div className='flex1'>
                 <div>วันที่ปัจจุบัน: {formattedDate}</div>
               </div>
-              <br />
-              <br />
             </div>
 
 
@@ -102,7 +109,7 @@ export default function index() {
                   <Form.Item>
                     <Space>
                       <Link to="/">
-                        <Button htmlType="button" style={{ marginRight: "10px" }}>
+                        <Button htmlType="button" style={{ marginRight: "10px" }} onClick={handleReset}>
                           ยกเลิก
                         </Button>
                       </Link>

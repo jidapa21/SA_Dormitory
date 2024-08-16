@@ -21,7 +21,7 @@ export default function Index() {
   const formItemLayout = {
     labelCol: {
       xs: { span: 36 },
-      sm: { span: 7 }, 
+      sm: { span: 7 },
     },
     wrapperCol: {
       xs: { span: 24 },
@@ -43,19 +43,18 @@ export default function Index() {
       <div className="container">
         <div className="background">
           <div className="flex-form">
-            <div className='name-text title-1-flex'>
-              <div className='flex1'>
-                <div>ผู้ทำเรื่อง</div>
-                <div>B191563</div>
-                <div>มนัสเต</div>
-                <div>สวัสดิกะ</div>
-              </div>
-              <div className='flex1'>
-                <div>วันที่ปัจจุบัน: {formattedDate}</div>
-              </div>
-              <br />
-              <br />
+            <div className='name-text info-box title-1-flex'>
+                <div className='flex1'>
+                  <div>ผู้ทำเรื่อง</div>
+                  <div>B191563</div>
+                  <div>กานต์รวี</div>
+                  <div>นภารัตน์</div>
+                </div>
+                <div className='flex1'>
+                  <div>วันที่ปัจจุบัน: {formattedDate}</div>
+                </div>
             </div>
+
 
             <Form
               name="layout-multiple-horizontal"

@@ -15,7 +15,7 @@ export default function index() {
 
   return (
     <>
-    <br />
+      <br />
       <div className='title-1-flex'>
         <div className='text-1'>แจ้งซ่อม</div>
         <div className='status-text'>สถานะ</div>
@@ -27,17 +27,19 @@ export default function index() {
       <div className="container">
         <div className="background">
           <div className="flex-form">
-            <div className='name-text flex1'>
-              <div>ผู้รับบริการ</div>
-              <div>B191563</div>
-              <div>มนัสเต</div>
-              <div>สวัสดิกะ</div>
-            </div>
-            <div className='name-text flex1'>
-              <div>อาคาร</div>
-              <div>4</div>
-              <div>ห้อง</div>
-              <div>414A</div>
+            <div className='name-text info-box'>
+              <div className='name-text flex1'>
+                <div>ผู้รับบริการ</div>
+                <div>B191563</div>
+                <div>กานต์รวี</div>
+                <div>นภารัตน์</div>
+              </div>
+              <div className='name-text flex1'>
+                <div>อาคาร</div>
+                <div>4</div>
+                <div>ห้อง</div>
+                <div>414A</div>
+              </div>
             </div>
             <br />
             <br />

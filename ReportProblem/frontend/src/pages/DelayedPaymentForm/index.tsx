@@ -42,11 +42,11 @@ export default function index() {
             <div className="container">
             <div className="background">
                 <div className="flex-form">
-                    <div className='name-text flex1'>
+                    <div className='name-text info-box flex1'>
                         <div>ผู้ทำเรื่อง</div>
                         <div>B191563</div>
-                        <div>มนัสเต</div>
-                        <div>สวัสดิกะ</div>
+                        <div>กานต์รวี</div>
+                        <div>นภารัตน์</div>
                         <br />
                         <br />
                     </div>
