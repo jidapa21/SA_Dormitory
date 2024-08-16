@@ -39,6 +39,8 @@ export default function index() {
               <div>ห้อง</div>
               <div>414A</div>
             </div>
+            <br />
+            <br />
             <Form
               name="basic"
               layout="vertical"

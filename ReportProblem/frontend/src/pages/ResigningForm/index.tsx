@@ -10,23 +10,13 @@ import {
 } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
 import "./../Repairing/index.css";
 
 export default function index() {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString();
 
-  const [componentDisabled, setComponentDisabled] = useState(true);
 
-  const formItemLayout = {
-    labelCol: {
-      xs: { span: 24 },
-      sm: { span: 6 },
-    },
-    wrapperCol: {
-      xs: { span: 24 },
-      sm: { span: 14 },
-    },
-  };
   return (
     <>
       <div className='title-1-flex'>
@@ -42,11 +32,13 @@ export default function index() {
       <div className="container">
         <div className="background">
           <div className="flex-form">
-            <div className='name-text flex1'>
-              <div>ผู้ทำเรื่อง</div>
-              <div>B191563</div>
-              <div>มนัสเต</div>
-              <div>สวัสดิกะ</div>
+            <div className='name-text title-1-flex'>
+              <div className=' flex1'>
+                <div>ผู้ทำเรื่อง</div> <div>B191563</div> <div>มนัสเต</div> <div>สวัสดิกะ</div>
+              </div>
+              <div className=' flex1'>
+                <div>วันที่ปัจจุบัน: {formattedDate}</div>
+              </div>
               <br />
               <br />
             </div>
@@ -90,88 +82,88 @@ export default function index() {
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="บ้านเลขที่" 
-                  name="house_no" 
+                  <Form.Item
+                    label="บ้านเลขที่"
+                    name="house_no"
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="หมู่ที่" 
-                  name="village_no" 
+                  <Form.Item
+                    label="หมู่ที่"
+                    name="village_no"
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label=":ซอย" 
-                  name="allay" 
+                  <Form.Item
+                    label=":ซอย"
+                    name="allay"
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="ถนน" 
-                  name="road" 
+                  <Form.Item
+                    label="ถนน"
+                    name="road"
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="ตำบล/แขวง" 
-                  name="sub_district" 
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณาเลือกตำบล/แขวง !",
-                    },
-                  ]}>
+                  <Form.Item
+                    label="ตำบล/แขวง"
+                    name="sub_district"
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณาเลือกตำบล/แขวง !",
+                      },
+                    ]}>
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="อำเภอ/เขต" 
-                  name="district" 
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณาเลือกอำเภอ/เขต !",
-                    },
-                  ]}>
+                  <Form.Item
+                    label="อำเภอ/เขต"
+                    name="district"
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณาเลือกอำเภอ/เขต !",
+                      },
+                    ]}>
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="จังหวัด" 
-                  name="province" 
-                  rules={[
-                    {
-                      required: true,
-                      message: "กรุณาเลือกจังหวัด !",
-                    },
-                  ]}>
+                  <Form.Item
+                    label="จังหวัด"
+                    name="province"
+                    rules={[
+                      {
+                        required: true,
+                        message: "กรุณาเลือกจังหวัด !",
+                      },
+                    ]}>
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="ไปรษณีย์" 
-                  name="post_code"
+                  <Form.Item
+                    label="ไปรษณีย์"
+                    name="post_code"
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item 
-                  label="เบอร์โทรศัพท์" 
-                  name="phone_number"
+                  <Form.Item
+                    label="เบอร์โทรศัพท์"
+                    name="phone_number"
                   >
                     <Input />
                   </Form.Item>

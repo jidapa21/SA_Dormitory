@@ -75,8 +75,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         {/* User Info Section */}
         <div className="user-info-container">
           <img src={userImage} alt="User" />
-          <div className="id">12345</div>
-          <div className="name">John Doe</div>
+          <div className="id">B191563</div>
+          <div className="name">มนัสเต สวัสดิกะ</div>
         </div>
         <Menu
           className='custom-menu'

@@ -6,7 +6,7 @@
 }
 
 .background {
-    background-color: #94abc8; /* สีพื้นหลังของกล่อง */
+    background-color: #c3eaff; /* สีพื้นหลังของกล่อง */
     padding: 10px; /* ช่องว่างภายในกล่อง (ปรับขนาดเพื่อลดขนาด padding) */
     width: 70%; /* ความกว้างของกล่อง */
     height: auto; /* ความสูงของกล่อง */
@@ -63,7 +63,7 @@
     color: rgb(48, 48, 48);
     font-size: 20px;
     width: 140px;
-    background-color: #bababa;
+    background-color: #bfbfbf;
     border-radius: 10px;
     padding: 10px;
     position: absolute;

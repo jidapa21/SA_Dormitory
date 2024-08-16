@@ -38,14 +38,14 @@ const Index: React.FC = () => {
         <>
           {state.map((state: string) => {
             let color: string;
-            if (state === 'รอการตรวจสอบ') {
-              color = 'gray';
+            if (state === 'รอดำเนินการ') {
+              color = '#bfbfbf';
             } else if (state === 'กำลังดำเนินการ') {
-              color = 'yellow';
+              color = '#1677ff';
             } else if (state === 'อนุมัติ') {
-              color = 'green';
+              color = '#52c41a';
             } else if (state === 'เสร็จสิ้น') {
-              color = 'green';
+              color = '#52c41a';
             } else {
               color = 'default';
             }
@@ -66,7 +66,7 @@ const Index: React.FC = () => {
       no: '1',
       subject: 'ฟอร์มขออนุญาติเข้า-ออกหอพัก',
       type: 'ฟอร์มเอกสาร',
-      state: ['รอการตรวจสอบ'],
+      state: ['รอดำเนินการ'],
     },
     {
       key: '2',

@@ -22,6 +22,9 @@ import "./../Repairing/index.css";
 
 export default function index() {
 
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString();
+  
   const [value, setValue] = useState(1);
 
   const onChange = (e: any) => {
@@ -44,11 +47,13 @@ export default function index() {
       <div className="container">
         <div className="background">
           <div className="flex-form">
-            <div className='name-text flex1'>
-              <div>ผู้ทำเรื่อง</div>
-              <div>B191563</div>
-              <div>มนัสเต</div>
-              <div>สวัสดิกะ</div>
+          <div className='name-text title-1-flex'>
+              <div className=' flex1'>
+                <div>ผู้ทำเรื่อง</div> <div>B191563</div> <div>มนัสเต</div> <div>สวัสดิกะ</div>
+              </div>
+              <div className=' flex1'>
+                <div>วันที่ปัจจุบัน: {formattedDate}</div>
+              </div>
               <br />
               <br />
             </div>
