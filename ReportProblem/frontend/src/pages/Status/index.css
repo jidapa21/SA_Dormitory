@@ -1,0 +1,27 @@
+
+.grid1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    column-gap: 0px;
+    row-gap: 5px;
+    width: 90vw; /* ความกว้างเต็มหน้าจอ */
+}
+.item1{
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background: rgb(216, 216, 216);
+    padding: 20px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    column-gap: 0px;
+    row-gap: 5px;
+    width: 90vw;
+}
+.item2{
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    padding: 20px;
+}

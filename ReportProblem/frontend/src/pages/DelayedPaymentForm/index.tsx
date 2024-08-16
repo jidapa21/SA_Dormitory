@@ -19,6 +19,18 @@ import { NavLink, Link } from 'react-router-dom';
 import "./index.css";
 
 export default function index() {
+
+    const formItemLayout = {
+        labelCol: {
+          xs: { span: 24 },
+          sm: { span: 6 },
+        },
+        wrapperCol: {
+          xs: { span: 24 },
+          sm: { span: 14 },
+        },
+      };
+
     return (
         <>
             <div className='title-1-flex'>
@@ -45,7 +57,7 @@ export default function index() {
                     </div>
 
 
-                    <Form layout="vertical">
+                    <Form layout="horizontal">
                         <Row gutter={64}>
                             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                                 <Form.Item

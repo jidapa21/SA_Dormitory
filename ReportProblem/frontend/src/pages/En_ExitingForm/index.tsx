@@ -54,7 +54,7 @@ export default function index() {
             </div>
 
 
-            <Form layout="vertical">
+            <Form layout="horizontal">
               <Row gutter={64}>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                   <Form.Item label="เรื่องที่ขอ:"
@@ -75,15 +75,10 @@ export default function index() {
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                   <Form.Item
                     label="เนื่องจาก"
-                    name="because_of "
-                    rules={[
-                      {
-                        required: true,
-                        message: "กรุณากรอกเหตุผลในการขออนุญาติเข้า-ออกหอพัก !",
-                      },
-                    ]}
+                    name="because_of"
+                    rules={[{ required: true, message: 'กรุณากรอกเหตุผลในการขออนุญาติเข้า-ออกหอพัก !' }]}
                   >
-                    <Input />
+                    <Input.TextArea />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>

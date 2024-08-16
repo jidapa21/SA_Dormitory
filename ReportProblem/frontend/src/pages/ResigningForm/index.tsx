@@ -22,13 +22,18 @@ import "./index.css";
 
 export default function index() {
 
-  const [value, setValue] = useState(1);
+  const [componentDisabled, setComponentDisabled] = useState(true);
 
-  const onChange = (e: any) => {
-    console.log('radio checked', e.target.value);
-    setValue(e.target.value);
+  const formItemLayout = {
+    labelCol: {
+      xs: { span: 24 },
+      sm: { span: 6 },
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: 14 },
+    },
   };
-
   return (
     <>
       <div className='title-1-flex'>
@@ -54,20 +59,18 @@ export default function index() {
             </div>
 
 
-            <Form layout="vertical">
+            <Form
+              name="layout-multiple-horizontal"
+              layout="horizontal"
+            >
               <Row gutter={64}>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                   <Form.Item
                     label="เหตุผลที่ลาออกเนื่องจาก"
-                    name="because_of "
-                    rules={[
-                      {
-                        required: true,
-                        message: "กรุณากรอกเหตุผลในการลาออกจากหอพัก !",
-                      },
-                    ]}
+                    name="because_of"
+                    rules={[{ required: true, message: 'กรุณากรอกเหตุผลในการลาออกจากหอพัก !' }]}
                   >
-                    <Input />
+                    <Input.TextArea />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
@@ -80,43 +83,104 @@ export default function index() {
                         message: "กรุณาเลือกสถานที่ที่ไปพักหลังลาออกจากหอพัก !",
                       },
                     ]}>
-                    <Radio.Group onChange={onChange} value={value}>
-                      <Radio value={1}>บ้านพัก</Radio>
-                      <Radio value={2}>หอพักภายนอกมหาวิทยาลัย</Radio>
+                    <Radio.Group>
+                      <Radio value="rest_home"> บ้านพัก </Radio>
+                      <Radio value="dormitory_outside"> หอพักภายนอกมหาวิทยาลัย </Radio>
                     </Radio.Group>
                   </Form.Item>
                 </Col>
 
                 <Divider style={{ borderWidth: "2px", width: "5%" }} />
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  ที่อยู่
+                  ที่อยู่ที่ท่านพัก
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item
-                    label="เนื่องจาก"
-                    name="because_of "
-                    rules={[
-                      {
-                        required: true,
-                        message: "กรุณากรอกเหตุผลในการขออนุญาติเข้า-ออกหอพัก !",
-                      },
-                    ]}
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="บ้านเลขที่" 
+                  name="house_no" 
                   >
                     <Input />
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                  <Form.Item
-                    label="วันที่ขออนุญาติ"
-                    name="date_request"
-                    rules={[
-                      {
-                        required: true,
-                        message: "กรุณาเลือกวัน/เดือน/ปี !",
-                      },
-                    ]}
+                  <Form.Item 
+                  label="หมู่ที่" 
+                  name="village_no" 
                   >
-                    <DatePicker style={{ width: "100%" }} />
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label=":ซอย" 
+                  name="allay" 
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="ถนน" 
+                  name="road" 
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="ตำบล/แขวง" 
+                  name="sub_district" 
+                  rules={[
+                    {
+                      required: true,
+                      message: "กรุณาเลือกตำบล/แขวง !",
+                    },
+                  ]}>
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="อำเภอ/เขต" 
+                  name="district" 
+                  rules={[
+                    {
+                      required: true,
+                      message: "กรุณาเลือกอำเภอ/เขต !",
+                    },
+                  ]}>
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="จังหวัด" 
+                  name="province" 
+                  rules={[
+                    {
+                      required: true,
+                      message: "กรุณาเลือกจังหวัด !",
+                    },
+                  ]}>
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="ไปรษณีย์" 
+                  name="post_code"
+                  >
+                    <Input />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                  <Form.Item 
+                  label="เบอร์โทรศัพท์" 
+                  name="phone_number"
+                  >
+                    <Input />
                   </Form.Item>
                 </Col>
               </Row>
@@ -140,7 +204,6 @@ export default function index() {
                   </Form.Item>
                 </Col>
               </Row>
-
             </Form>
           </div>
         </div>

@@ -12,4 +12,5 @@ type CurrentAddress struct {
     District		string
     province		string
 	post_code		string
+    Phone_Number    string
 }
