@@ -6,22 +6,107 @@ import {
   Space,
   Col,
   Upload,
+  Card,
+  Divider,
+  Modal, 
+  message
 } from "antd";
-import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
-import { Link } from 'react-router-dom';
-import "./../Repairing/index.css";
+import { PlusOutlined, UploadOutlined, DeleteOutlined } from "@ant-design/icons";
+import type { ColumnsType } from "antd/es/table";
+import { Link, useNavigate } from "react-router-dom";
+import { StudentInterface } from "./../../interfaces/Student";
+import "./../repair/index.css";
 
 export default function index() {
 
+  const columns: ColumnsType<StudentInterface> = [
+    {
+      title: "ลำดับ",
+      dataIndex: "ID",
+      key: "id",
+    },
+    {
+      title: "หัวข้อการขอรับบริการ",
+      dataIndex: "Subject",
+      key: "subject",
+    },
+    {
+      title: "ภาพประกอบ",
+      dataIndex: "Image",
+      key: "image",
+      width: "15%",
+      render: (text, record, index) => (
+        <img src={record.Profile} className="w3-left w3-circle w3-margin-right" width="100%" />
+      )
+    },
+    {
+      title: "ชื่อ",
+      dataIndex: "FirstName",
+      key: "firstname",
+    },
+    {
+      title: "นามสกุล",
+      dataIndex: "LastName",
+      key: "lastname",
+    },
+    {
+      title: "เพศ",
+      dataIndex: "Gender",
+      key: "gender",
+      render: (item) => Object.values(item.Name),
+    },
+    {
+      title: "อีเมล",
+      dataIndex: "Email",
+      key: "email",
+    },
+    {
+      title: "วันเกิด",
+      dataIndex: "BirthDay",
+      key: "birthday",
+      render: (record) => <p>{dayjs(record).format("dddd DD MMM YYYY")}</p>,
+    },
+    {
+      title: "จัดการ",
+      dataIndex: "Manage",
+      key: "manage",
+      render: (text, record, index) => (
+        <>
+          <Button
+            onClick={() => navigate(`/customer/edit/${record.ID}`)}
+            shape="circle"
+            icon={<EditOutlined />}
+            size={"large"}
+          />
+          <Button
+            onClick={() => showModal(record)}
+            style={{ marginLeft: 10 }}
+            shape="circle"
+            icon={<DeleteOutlined />}
+            size={"large"}
+            danger
+          />
+        </>
+      ),
+    },
+  ];
   return (
     <>
       <br />
-      <div className='title-1-flex'>
-        <div className='text-1'>แจ้งซ่อม</div>
-      </div>
-      <br />
-      <div className="full-width-line"></div>
-      <br />
+      <Card>
+        <h2>แจ้งซ่อม</h2>
+        <Divider />
+        <Form
+          name="basic"
+          layout="vertical"
+          //onFinish={onFinish}
+          autoComplete="off"
+        >
+          <h3>ผู้รับบริการ B191563</h3>
+          <h3>กานต์รวี</h3>
+          <h3>นภารัตน์</h3>
+        </Form>
+      </Card>
       <div className="container">
         <div className="background">
           <div className="flex-form">

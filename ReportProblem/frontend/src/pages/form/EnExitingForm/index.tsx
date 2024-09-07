@@ -11,7 +11,7 @@ import {
 import { PlusOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import "./../Repairing/index.css";
+import "../../repair/index.css";
 
 export default function index() {
 

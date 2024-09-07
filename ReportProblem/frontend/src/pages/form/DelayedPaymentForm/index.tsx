@@ -10,7 +10,7 @@ import {
 import { PlusOutlined } from "@ant-design/icons";
 import type { ColumnsType } from "antd/es/table";
 import { NavLink, Link } from 'react-router-dom';
-import "./../Repairing/index.css";
+import "../../repair/index.css";
 
 export default function index() {
 

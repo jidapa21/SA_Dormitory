@@ -20,10 +20,10 @@ import { useNavigate, Link } from "react-router-dom";
 function StudentCreate() {
   const navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
-  
+
   const onFinish = async (values: StudentInterface) => {
     let res = await CreateStudent(values);
-   
+
     if (res.status == 201) {
       messageApi.open({
         type: "success",
@@ -41,7 +41,7 @@ function StudentCreate() {
       });
     }
   };
-  
+
   return (
     <div>
       {contextHolder}
