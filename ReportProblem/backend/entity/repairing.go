@@ -15,9 +15,9 @@ type Repairing struct {
 
     // StudentID ทำหน้าที่เป็น FK
     Student_ID  uint
-    Student     Student `gorm:"foreignKey:Student_ID"`
+    Student     Student `gorm:"foreignKey:StudentID"`
 
     // AdminID ทำหน้าที่เป็น FK
     Admin_ID    uint
-    Admin       Admin `gorm:"foreignKey:Admin_ID"`
+    Admin       Admin `gorm:"foreignKey:AdminID"`
 }

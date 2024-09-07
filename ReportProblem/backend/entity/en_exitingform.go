@@ -8,17 +8,17 @@ import (
 type En_ExitingForm struct {
     gorm.Model
 	Date_Submission	time.Time
-	request			string
+	Request			string
     Because_Of		string
 	Date_Request	time.Time
     Status			string
 
     // StudentID ทำหน้าที่เป็น FK
     Student_ID	string
-    Student		Student `gorm:"foreignKey:Student_ID"`
+    Student		Student `gorm:"foreignKey:StudentID"`
 
     // AdminID ทำหน้าที่เป็น FK
     Admin_ID	string
-    Admin		Admin `gorm:"foreignKey:Admin_ID"`
+    Admin		Admin `gorm:"foreignKey:AdminID"`
 
 }

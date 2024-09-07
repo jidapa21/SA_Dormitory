@@ -10,18 +10,14 @@ type ResigningForm struct {
 	Date			time.Time
     Because_Of		string
 	Accommodation	string
-//    Phone_Number	string
     Status			string
 
     // StudentID ทำหน้าที่เป็น FK
     Student_ID	uint
-    Student		Student `gorm:"foreignKey:Student_ID"`
+    Student		Student `gorm:"foreignKey:StudentID"`
 
     // AdminID ทำหน้าที่เป็น FK
     Admin_ID	uint
-    Admin		Admin `gorm:"foreignKey:Admin_ID"`
+    Admin		Admin `gorm:"foreignKey:AdminID"`
 
-	// CurrentAddressID ทำหน้าที่เป็น FK
-//	CurrentAddress_ID	uint
-//	CurrentAddress      CurrentAddress `gorm:"foreignKey:CurrentAddress_ID"`
 }

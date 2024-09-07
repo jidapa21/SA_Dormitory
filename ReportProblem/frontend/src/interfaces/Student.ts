@@ -7,6 +7,5 @@ export interface StudentInterface {
     Birthday?: string;
     Year?: number;
     Major?: string;
-    GenderID?: number;  
-    
-  }
+    GenderID?: number;
+}

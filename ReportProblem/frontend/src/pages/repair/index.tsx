@@ -14,12 +14,12 @@ import {
 import { PlusOutlined, UploadOutlined, DeleteOutlined } from "@ant-design/icons";
 import type { ColumnsType } from "antd/es/table";
 import { Link, useNavigate } from "react-router-dom";
-import { StudentInterface } from "./../../interfaces/Student";
+import { RepairInterface } from "./../../interfaces/repairing";
 import "./../repair/index.css";
 
 export default function index() {
 
-  const columns: ColumnsType<StudentInterface> = [
+  const columns: ColumnsType<RepairInterface> = [
     {
       title: "ลำดับ",
       dataIndex: "ID",
@@ -36,7 +36,7 @@ export default function index() {
       key: "image",
       width: "15%",
       render: (text, record, index) => (
-        <img src={record.Profile} className="w3-left w3-circle w3-margin-right" width="100%" />
+        <img src={record.Image} className="w3-left w3-circle w3-margin-right" width="100%" />
       )
     },
     {
