@@ -7,7 +7,6 @@ import (
 
 type DelayedPaymentForm struct {
     gorm.Model
-    Name				string
     Dorm_Payment		*float64
     Electricly_Bill		*float64
     Water_Bill			*float64

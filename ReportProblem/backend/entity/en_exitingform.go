@@ -7,11 +7,10 @@ import (
 
 type En_ExitingForm struct {
     gorm.Model
-    Name			string
 	Date_Submission	time.Time
 	request			string
     Because_Of		string
-	Date_Reques		time.Time
+	Date_Request	time.Time
     Status			string
 
     // StudentID ทำหน้าที่เป็น FK

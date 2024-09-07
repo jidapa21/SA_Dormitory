@@ -7,11 +7,10 @@ import (
 
 type ResigningForm struct {
     gorm.Model
-    Name			string
 	Date			time.Time
     Because_Of		string
 	Accommodation	string
-    Phone_Number	string
+//    Phone_Number	string
     Status			string
 
     // StudentID ทำหน้าที่เป็น FK
@@ -23,6 +22,6 @@ type ResigningForm struct {
     Admin		Admin `gorm:"foreignKey:Admin_ID"`
 
 	// CurrentAddressID ทำหน้าที่เป็น FK
-	CurrentAddress_ID	uint
-	CurrentAddress      CurrentAddress `gorm:"foreignKey:CurrentAddress_ID"`
+//	CurrentAddress_ID	uint
+//	CurrentAddress      CurrentAddress `gorm:"foreignKey:CurrentAddress_ID"`
 }
