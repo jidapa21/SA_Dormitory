@@ -38,8 +38,6 @@ export default function index() {
         <div className='text-1'>
           แบบฟอร์มขออนุญาติเข้า-ออกหอพักหลังเวลาปิดหอพัก/ค้างคืนนอกหอพัก
         </div>
-        <div className='status-text'>สถานะ</div>
-        <div className='status-textbox'>รอดำเนินการ</div>
       </div>
       <br />
       <div className="full-width-line"></div>

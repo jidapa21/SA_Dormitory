@@ -11,7 +11,7 @@ import {
 } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import './../Repairing/index.css'; // รวม CSS ของคุณ
+import './../Repairing/index.css'; 
 
 export default function Index() {
   const today = new Date();
@@ -34,8 +34,6 @@ export default function Index() {
       <br />
       <div className='title-1-flex'>
         <div className='text-1'>แบบฟอร์มลาออกหอพัก</div>
-        <div className='status-text'>สถานะ</div>
-        <div className='status-textbox'>รอดำเนินการ</div>
       </div>
       <br />
       <Divider />

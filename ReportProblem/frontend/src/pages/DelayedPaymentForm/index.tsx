@@ -27,14 +27,11 @@ export default function index() {
 
     return (
         <>
-        <br />
             <div className='title-1-flex'>
                 <div className='text-1'>
                     แบบฟอร์มขอผ่อนผันการชำระ
                     ค่าหอพักนักศึกษา/ค่าไฟฟ้า/ค่าน้ำประปา                    
                 </div>
-                <div className='status-text'>สถานะ</div>
-                <div className='status-textbox'>รอดำเนินการ</div>
             </div>
             <br />
             <div className="full-width-line"></div>

@@ -9,7 +9,7 @@ import {
 } from "antd";
 import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom';
-import "./index.css";
+import "./../Repairing/index.css";
 
 export default function index() {
 
@@ -18,8 +18,6 @@ export default function index() {
       <br />
       <div className='title-1-flex'>
         <div className='text-1'>แจ้งซ่อม</div>
-        <div className='status-text'>สถานะ</div>
-        <div className='status-textbox'>รอดำเนินการ</div>
       </div>
       <br />
       <div className="full-width-line"></div>

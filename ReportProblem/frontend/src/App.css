@@ -1,87 +1,48 @@
-/*
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-*/
+
 body {
-    background-color: #efefef;
-}
-
-
-.container {
-    display: flex;
-}
-
-main {
+    margin: 0;
+  }
+  .login {
+    margin: 0;
+    height: 100vh;
     width: 100%;
-    padding: 20px;
-}
-
-.sidebar {
-    background: #454545;
-    color: #ffffff;
-    width: 200px;
-    display: flex;
-    /* ใช้ Flexbox สำหรับจัดตำแหน่งเนื้อหา */
-    flex-direction: column;
-    /* วางเนื้อหาในแนวตั้ง */
-    align-items: center;
-    /* จัดกลางเนื้อหาตามแนวนอน */
-    /*justify-content: center;*/
-    /* จัดกลางเนื้อหาตามแนวตั้ง */
-    transition: all 0.5s;
+    /* overflow: scroll; */
+    background-color: #192545;
+  }
+  .login-admin {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    /* overflow: scroll; */
+    background-color: #021365;
+  }
+  .header {
+    text-align: center;
+  }
+  .card-login {
+    overflow-y: scroll;
+    width: 70%;
     height: auto;
-}
-
-.top_section {
-    display: flex;
-    align-items: center;
-    padding: 20px 15px;
-}
-
-.top_section img {
-    width: 90px;
-    /* กำหนดขนาดของรูปภาพให้เป็นสี่เหลี่ยมจัตุรัส */
-    height: 110px;
-    /* ความกว้างและความสูงต้องเท่ากัน */
-    border-radius: 50%;
-    /* ทำให้มุมของรูปภาพกลมทั้งหมด */
-    object-fit: cover;
-    /* ครอบตัดรูปภาพเพื่อให้พอดีกับกรอบ */
-}
-
-.logo {
-    font-size: 30px;
-}
-
-.bars {
-    display: flex;
-    font-size: 25px;
-    margin-left: 50px;
-}
-
-.link {
-    display: flex;
-    color: #ffffff;
-    padding: 10px 15px;
-    gap: 15px;
-    transition: all 0.5s;
-}
-
-.link:hover {
-    background: rgb(159, 159, 159);
-    color: #0032e5;
-    transition: all 0.5s;
-}
-
-.active {
-    background: rgb(255, 236, 236);
-    color: #e60000;
-}
-
-.icon,
-.link_text {
-    font-size: 20px;
-}
+    max-height: 550px;
+  }
+  .images-logo {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+  .images-admin-logo {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+  .login-form-button {
+    width: 100%;
+    background-color: #294984; /* สีพื้นหลังของปุ่ม student */
+  }
+  .admin-form-button {
+    width: 100%;
+    background-color: #14288a; /* สีพื้นหลังของปุ่ม admin */
+  }
+  
